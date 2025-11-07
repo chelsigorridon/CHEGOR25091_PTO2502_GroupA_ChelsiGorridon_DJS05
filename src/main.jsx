@@ -3,21 +3,21 @@ import { createRoot } from 'react-dom/client'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import './index.css'
 import App from './App.jsx'
-import Showdetails from '.Showdetails.jsx';
+import ShowDetails from './ShowDetails.jsx'
 
-const Router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
   {
     path: "/showdetails/:podcastId",
-    element: <Showdetails /> ,
+    element: <ShowDetails /> ,
   }
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={Router} />
+    <RouterProvider router={router} />
   </StrictMode>,
 )
