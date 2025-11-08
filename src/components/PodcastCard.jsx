@@ -1,5 +1,6 @@
 import { formatDate } from "../utils/formatDate";
 import styles from "./PodcastCard.module.css";
+import { Link } from "react-router-dom";
 
 /**
  * Renders a single podcast preview card with image, title, number of seasons,
@@ -27,7 +28,8 @@ export default function PodcastCard({ podcast, genres }) {
   });
 
   return (
-    <div className={styles.card}>
+    
+       <Link to={`/showdetails/${podcast.id}`} className={styles.card}>
       <img src={podcast.image} alt={podcast.title} />
 
       <h3>{podcast.title}</h3>
@@ -36,6 +38,7 @@ export default function PodcastCard({ podcast, genres }) {
       <p className={styles.updatedText}>
         Updated {formatDate(podcast.updated)}
       </p>
-    </div>
+    </Link>
+  
   );
 }
