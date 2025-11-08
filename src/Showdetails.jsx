@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { genres } from "./data.js";
+import styles from "./Showdetails.module.css";
 
 export default function ShowDetails() {
   const { podcastId } = useParams();
