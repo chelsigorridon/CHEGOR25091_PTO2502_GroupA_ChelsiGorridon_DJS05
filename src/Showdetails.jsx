@@ -47,3 +47,35 @@ useEffect(() => {
   if (error) return <p style={{ color: "red" }}>{error}</p>;
   if (!podcast) return <p>Podcast not found.</p>;
  
+  return (
+    <div className={styles.container}>
+      <img
+        src={podcast.image}
+        alt={podcast.title}
+        className={styles.image}
+      />
+      <h1 className={styles.title}>{podcast.title}</h1>
+      <p><strong>Genre:</strong> {podcast.genreTitle}</p>
+      <p><strong>About the Genre:</strong> {podcast.genreDescription}</p>
+      <p><strong>Description:</strong> {podcast.description}</p>
+
+      {podcast.seasons && podcast.seasons.length > 0 && (
+        <div className={styles.seasons}>
+          <h2>Seasons</h2>
+          {podcast.seasons.map((season) => (
+            <details key={season.season} className={styles.season}>
+              <summary>{season.title}</summary>
+              <ul className={styles.episodeList}>
+                {season.episodes?.map((ep) => (
+                  <li key={ep.episode} className={styles.episodeItem}>
+                    {ep.title} ({ep.file ? ep.file : "No audio file"})
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
