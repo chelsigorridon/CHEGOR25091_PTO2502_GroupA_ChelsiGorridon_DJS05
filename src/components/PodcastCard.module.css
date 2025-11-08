@@ -1,4 +1,7 @@
 .card {
+  text-decoration: none; 
+  color: inherit;
+  user-select: none;
   background: white;
   padding: 1rem;
   border-radius: 8px;
