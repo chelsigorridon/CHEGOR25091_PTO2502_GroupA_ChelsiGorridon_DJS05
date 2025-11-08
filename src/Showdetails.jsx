@@ -9,22 +9,41 @@ export default function ShowDetails() {
   const [error, setError] = useState(null);
 
 useEffect(() => {
-    async function fetchPodcastDetails() {
+    async function fetchPodcast() {
       try {
-        const response = await fetch(
-          `https://podcast-api.netlify.app/id/${podcastId}`
-        );
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
+        setLoading(true);
+        setError(null);
+
+       
+        const response = await fetch(`https://podcast-api.netlify.app/id/${podcastId}`);
+        if (!response.ok) throw new Error("Failed to fetch podcast data");
         const data = await response.json();
-        setPodcast(data);
+
+        
+        const genreInfo = genres.find((genre) =>
+          genre.shows.includes(podcastId)
+        );
+
+       
+        const combined = {
+          ...data,
+          genreTitle: genreInfo?.title || "Unknown Genre",
+          genreDescription: genreInfo?.description || "No description available.",
+        };
+
+        setPodcast(combined);
       } catch (err) {
-        setError(err.message);
+        console.error(err);
+        setError("Failed to load podcast details.");
       } finally {
         setLoading(false);
       }
     }
 
-    fetchPodcastDetails();
+    fetchPodcast();
   }, [podcastId]);
+
+  if (loading) return <p>Loading podcast details...</p>;
+  if (error) return <p style={{ color: "red" }}>{error}</p>;
+  if (!podcast) return <p>Podcast not found.</p>;
+ 
