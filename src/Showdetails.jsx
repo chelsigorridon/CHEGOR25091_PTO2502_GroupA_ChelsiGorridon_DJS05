@@ -20,9 +20,15 @@ export default function ShowDetails() {
   });
 
   return (
-    <div>
-      <h1>Podcast Details</h1>
-      <p>Podcast ID: {podcastId}</p>
-    </div>
-  );
+   <div className={styles.card}>
+         <img src={podcast.image} alt={podcast.title} />
+   
+         <h3>{podcast.title}</h3>
+         <p className={styles.seasons}>{podcast.seasons} seasons</p>
+         <div className={styles.tags}>{genreSpans}</div>
+         <p className={styles.updatedText}>
+           Updated {formatDate(podcast.updated)}
+         </p>
+       </div>
+  )
 }
