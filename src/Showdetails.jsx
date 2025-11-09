@@ -22,3 +22,25 @@ export default function ShowDetails() {
   }
   fetchPodcast();
 }, [podcastId]);
+
+if (error) return <p className={styles.error}>{error}</p>;
+if (!podcast) return <p className={styles.loading}>Loading...</p>;
+
+return (
+  <div className={styles.header}>
+  <img src={podcast.image} alt={podcast.title} className={styles.cover} />
+  <div className={styles.headerText}>
+    <h1 className={styles.title}>{podcast.title}</h1>
+    <p className={styles.description}>{podcast.description}</p>
+    <div className={styles.genreTags}>
+      {podcast.genres?.map((genre) => (
+        <span key={genre} className={styles.genreTag}>{genre}</span>
+      ))}
+    </div>
+
+     <div className={styles.infoRow}>
+      <p><strong>Total Seasons:</strong> {podcast.seasons.length}</p>
+      <p><strong>Last Updated:</strong> {new Date(podcast.updated).toLocaleDateString()}</p>
+    </div>
+  </div>
+</div>
