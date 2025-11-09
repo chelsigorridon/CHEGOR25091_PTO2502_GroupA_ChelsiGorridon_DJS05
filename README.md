@@ -42,31 +42,21 @@ The app supports smooth routing between the Home Page and Show Details Page, fea
 
 - **Show Details Page**
 
-- When a podcast card is clicked, users are navigated to the Show Details Page, which displays:
-
-- Podcast title, image, and full description
-
-- Updated date and genre information
-
-- A dropdown or tab selector for seasons
-
-- A list of episodes for the selected season, including:
-
-- Episode title
-
-- Episode description
-
-- Episode number and badge indicator
-
-- This page fetches and renders details using dynamic route parameters (e.g. /show/:id) with react-router-dom.
+  - When a podcast card is clicked, users are navigated to the Show Details Page, which displays:
+  - Podcast title, image, and full description
+  - Updated date and genre information
+  - A dropdown or tab selector for seasons
+  - A list of episodes for the selected season, including:
+  - Episode title
+  - Episode description
+  - Episode number and badge indicator
+  - This page fetches and renders details using dynamic route parameters (e.g. /show/:id) with react-router-dom.
 
 - **Routing and Navigation**
 
-- The app uses React Router for seamless navigation between pages:
-
-- / → Home page (Podcast list, search, filter, sort)
-
-- /show/:id → Show Details page (Seasons, episodes, and detailed info)
+  - The app uses React Router for seamless navigation between pages:
+  - / → Home page (Podcast list, search, filter, sort)
+  - /show/:id → Show Details page (Seasons, episodes, and detailed info)
 
 
 ## Project Structure
