@@ -1,8 +1,15 @@
+
+/* Show Details Container */
+
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
 }
+
+/* -------------------------------
+   Header Section (Show Summary)
+-------------------------------- */
 
 .header {
   display: flex;
@@ -13,6 +20,8 @@
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
 }
+
+/* Show Details IMG Cover */
 
 .cover {
   width: 240px;
@@ -58,6 +67,10 @@
   font-size: 0.9rem;
 }
 
+/* -------------------------------
+   Season Selector Dropdown
+-------------------------------- */
+
 .seasonSelector {
   display: flex;
   justify-content: space-between;
@@ -69,6 +82,10 @@
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
 }
+
+/* -------------------------------
+   Season Box (Selected Season Info)
+-------------------------------- */
 
 .seasonBox {
   background: #fff;
@@ -107,6 +124,10 @@
   font-size: 0.9rem;
   margin-top: 0.25rem;
 }
+
+/* -------------------------------
+   Episode List
+-------------------------------- */
 
 .episodes {
   display: flex;
@@ -148,6 +169,10 @@
   width: 100%;
 }
 
+/* -------------------------------
+   Loading & Error States
+-------------------------------- */
+
 .error {
   text-align: center;
   color: red;
@@ -158,4 +183,130 @@
   text-align: center;
   color: #666;
   margin-top: 2rem;
+}
+
+/* ---------------------------------------------- */
+/* 📱 MEDIA QUERIES — MOBILE RESPONSIVENESS       */
+/* ---------------------------------------------- */
+
+/* Tablets and smaller (≤ 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.25rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cover {
+    width: 180px;
+    height: 180px;
+  }
+
+  .headerText {
+    flex: unset;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .infoRow {
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .seasonSelector {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .seasonHeader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .seasonImage {
+    width: 140px;
+    height: 140px;
+  }
+
+  .seasonTitle {
+    font-size: 1rem;
+  }
+
+  .episodes {
+    gap: 0.75rem;
+  }
+
+  .episodeCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .episodeBadge {
+    width: 35px;
+    height: 35px;
+    font-size: 0.85rem;
+  }
+
+  .episodeTitle {
+    font-size: 1rem;
+  }
+
+  .episodeDescription {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small phones (≤ 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .cover {
+    width: 150px;
+    height: 150px;
+  }
+
+  .genreTag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .dropdown {
+    font-size: 0.9rem;
+  }
+
+  .episodeTitle {
+    font-size: 0.95rem;
+  }
+
+  .episodeDescription {
+    font-size: 0.8rem;
+  }
+
+  .episodeCard {
+    padding: 0.75rem;
+  }
 }
