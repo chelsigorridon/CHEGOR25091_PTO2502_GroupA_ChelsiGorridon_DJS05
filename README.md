@@ -1,4 +1,4 @@
-# DJS04 – React Podcast App Show Detail Page with Routing and Navigation
+# DJS05 – React Podcast App Show Detail Page with Routing and Navigation
 
 A dynamic and responsive React application that allows users to browse, search, filter, and explore detailed podcast information fetched from a public API.
 The app supports smooth routing between the Home Page and Show Details Page, featuring interactive season and episode navigation.
@@ -42,7 +42,7 @@ The app supports smooth routing between the Home Page and Show Details Page, fea
 
 
 
-  **Show Details Page**
+  - **Show Details Page**
 
 - When a podcast card is clicked, users are navigated to the Show Details Page, which displays:
 
@@ -62,7 +62,7 @@ The app supports smooth routing between the Home Page and Show Details Page, fea
 
 - This page fetches and renders details using dynamic route parameters (e.g. /show/:id) with react-router-dom.
 
- **Routing and Navigation**
+ - **Routing and Navigation**
 
 - The app uses React Router for seamless navigation between pages:
 
@@ -106,7 +106,7 @@ The app supports smooth routing between the Home Page and Show Details Page, fea
 
 - The page dynamically displays seasons and episodes, updating as users interact.
 
-**Tech Stack**
+- **Tech Stack**
 
 - React 18+
 
