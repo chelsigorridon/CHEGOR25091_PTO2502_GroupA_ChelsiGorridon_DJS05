@@ -44,3 +44,23 @@ return (
     </div>
   </div>
 </div>
+
+<div className={styles.seasonSelector}>
+  <h2>Current Season</h2>
+  <select
+    value={selectedSeason?.season}
+    onChange={(e) => {
+      const season = podcast.seasons.find(
+        (s) => s.season === Number(e.target.value)
+      );
+      setSelectedSeason(season);
+    }}
+    className={styles.dropdown}
+  >
+    {podcast.seasons.map((season) => (
+      <option key={season.season} value={season.season}>
+        Season {season.season}
+      </option>
+    ))}
+  </select>
+</div>
