@@ -96,19 +96,13 @@ The app supports smooth routing between the Home Page and Show Details Page, fea
 
 - **Tech Stack**
 
-- React 18+
-
-- React Router DOM
-
-- Context API
-
-- Vite (for fast development server)
-
-- CSS Modules (for scoped styling)
-
-- JavaScript (ES6+)
-
-- HTML5 + Responsive CSS
+ - React 18+
+ - React Router DOM
+ - Context API
+ - Vite (for fast development server)
+ - CSS Modules (for scoped styling)
+ - JavaScript (ES6+)
+ - HTML5 + Responsive CSS
 
 ## How to Run
 
