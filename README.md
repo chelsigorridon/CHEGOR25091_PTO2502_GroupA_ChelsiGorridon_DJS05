@@ -40,9 +40,7 @@ The app supports smooth routing between the Home Page and Show Details Page, fea
   - Exposes search term, sort key, selected genre, page, and filtered podcasts
   - Components consume state via `usePodcasts()` or `PodcastContext`
 
-
-
-  - **Show Details Page**
+- **Show Details Page**
 
 - When a podcast card is clicked, users are navigated to the Show Details Page, which displays:
 
@@ -62,7 +60,7 @@ The app supports smooth routing between the Home Page and Show Details Page, fea
 
 - This page fetches and renders details using dynamic route parameters (e.g. /show/:id) with react-router-dom.
 
- - **Routing and Navigation**
+- **Routing and Navigation**
 
 - The app uses React Router for seamless navigation between pages:
 
