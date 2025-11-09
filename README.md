@@ -1,6 +1,7 @@
-# DJS04 – React Podcast App with Search, Sort, Filter & Pagination
+# DJS04 – React Podcast App Show Detail Page with Routing and Navigation
 
-This project is a **React-based podcast browsing application** that allows users to explore podcasts using powerful features such as search, sort, filter by genre, and automatic pagination. It builds upon earlier solutions (DJS03) and introduces shared state management using the React Context API.
+A dynamic and responsive React application that allows users to browse, search, filter, and explore detailed podcast information fetched from a public API.
+The app supports smooth routing between the Home Page and Show Details Page, featuring interactive season and episode navigation.
 
 ## Core Functionality
 
@@ -39,6 +40,37 @@ This project is a **React-based podcast browsing application** that allows users
   - Exposes search term, sort key, selected genre, page, and filtered podcasts
   - Components consume state via `usePodcasts()` or `PodcastContext`
 
+
+
+  **Show Details Page**
+
+- When a podcast card is clicked, users are navigated to the Show Details Page, which displays:
+
+- Podcast title, image, and full description
+
+- Updated date and genre information
+
+- A dropdown or tab selector for seasons
+
+- A list of episodes for the selected season, including:
+
+- Episode title
+
+- Episode description
+
+- Episode number and badge indicator
+
+- This page fetches and renders details using dynamic route parameters (e.g. /show/:id) with react-router-dom.
+
+ **Routing and Navigation**
+
+- The app uses React Router for seamless navigation between pages:
+
+- / → Home page (Podcast list, search, filter, sort)
+
+- /show/:id → Show Details page (Seasons, episodes, and detailed info)
+
+
 ## Project Structure
 
 ```
@@ -64,13 +96,31 @@ This project is a **React-based podcast browsing application** that allows users
 
 ## How It Works
 
-- When the app loads, it fetches all podcast data once.
-- The data is passed into the `PodcastProvider`, which handles:
-  - Searching titles
-  - Sorting by selected key
-  - Filtering by genre
-  - Splitting into pages based on screen size
-- Components like `PodcastGrid` display the processed data.
+- On startup, podcasts are fetched once from the API.
+
+- The data is stored in Context and used across components.
+
+- Users can search, sort, and filter podcasts interactively.
+
+- Clicking a podcast card navigates to its detailed Show Details Page.
+
+- The page dynamically displays seasons and episodes, updating as users interact.
+
+**Tech Stack**
+
+- React 18+
+
+- React Router DOM
+
+- Context API
+
+- Vite (for fast development server)
+
+- CSS Modules (for scoped styling)
+
+- JavaScript (ES6+)
+
+- HTML5 + Responsive CSS
 
 ## How to Run
 
