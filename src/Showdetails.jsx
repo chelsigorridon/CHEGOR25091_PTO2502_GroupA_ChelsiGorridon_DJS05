@@ -64,3 +64,18 @@ return (
     ))}
   </select>
 </div>
+
+{selectedSeason && (
+  <div className={styles.seasonBox}>
+    <div className={styles.seasonHeader}>
+      <img src={selectedSeason.image} alt={selectedSeason.title} className={styles.seasonImage} />
+      <div>
+        <h3 className={styles.seasonTitle}>
+          Season {selectedSeason.season}: {selectedSeason.title}
+        </h3>
+        <p className={styles.seasonDescription}>{selectedSeason.description}</p>
+        <p className={styles.episodeCount}>
+          {selectedSeason.episodes.length} Episodes
+        </p>
+      </div>
+    </div>
