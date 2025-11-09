@@ -79,3 +79,20 @@ return (
         </p>
       </div>
     </div>
+
+    <div className={styles.episodes}>
+  {selectedSeason.episodes.map((ep) => (
+    <div key={ep.episode} className={styles.episodeCard}>
+      <div className={styles.episodeBadge}>S{selectedSeason.season}</div>
+      <div className={styles.episodeInfo}>
+        <p className={styles.episodeTitle}>{ep.title}</p>
+        <p className={styles.episodeDescription}>{ep.description}</p>
+        <div className={styles.episodeMeta}>
+          <span>{ep.duration}</span>
+          <span>•</span>
+          <span>{new Date(ep.date).toLocaleDateString()}</span>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
